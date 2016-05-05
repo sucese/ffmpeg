@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Demo/Demo.iml" filepath="$PROJECT_DIR$/Demo/Demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Library/Library.iml" filepath="$PROJECT_DIR$/Library/Library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/endless-recycler-view.iml" filepath="$PROJECT_DIR$/endless-recycler-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerview/Library.iml" filepath="$PROJECT_DIR$/recyclerview/Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/endless-recyclerview.iml" filepath="$PROJECT_DIR$/endless-recyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
     </modules>
   </component>
 </project>
