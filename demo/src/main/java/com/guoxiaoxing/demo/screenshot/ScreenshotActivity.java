@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.Window;
 
 import com.guoxiaoxing.demo.R;
-import com.guoxiaoxing.recyclerview.util.RecyclerViewUtils;
+import com.guoxiaoxing.recyclerview.utils.RecyclerViewUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
