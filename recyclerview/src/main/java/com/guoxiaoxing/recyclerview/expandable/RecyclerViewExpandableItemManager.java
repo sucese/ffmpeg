@@ -28,6 +28,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableAdapterHelper;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.holder.ExpandableItemViewHolder;
 import com.guoxiaoxing.recyclerview.utils.CustomRecyclerViewUtils;
 
 /**

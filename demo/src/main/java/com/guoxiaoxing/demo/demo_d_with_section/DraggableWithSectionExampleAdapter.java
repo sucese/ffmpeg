@@ -30,10 +30,10 @@ import com.guoxiaoxing.demo.common.data.AbstractDataProvider;
 import com.guoxiaoxing.demo.common.data.ExampleSectionDataProvider;
 import com.guoxiaoxing.demo.common.utils.DrawableUtils;
 import com.guoxiaoxing.demo.common.utils.ViewUtils;
-import com.guoxiaoxing.recyclerview.draggable.DraggableItemAdapter;
+import com.guoxiaoxing.recyclerview.draggable.adapter.DraggableItemAdapter;
 import com.guoxiaoxing.recyclerview.draggable.DraggableItemConstants;
 import com.guoxiaoxing.recyclerview.draggable.ItemDraggableRange;
-import com.guoxiaoxing.recyclerview.utils.AbstractDraggableItemViewHolder;
+import com.guoxiaoxing.recyclerview.draggable.holder.AbstractDraggableItemViewHolder;
 
 class DraggableWithSectionExampleAdapter
         extends RecyclerView.Adapter<DraggableWithSectionExampleAdapter.MyViewHolder>

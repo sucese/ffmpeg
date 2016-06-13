@@ -19,13 +19,18 @@ package com.guoxiaoxing.recyclerview.expandable;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.guoxiaoxing.recyclerview.draggable.DraggableItemAdapter;
 import com.guoxiaoxing.recyclerview.draggable.DraggableItemConstants;
-import com.guoxiaoxing.recyclerview.draggable.DraggableItemViewHolder;
 import com.guoxiaoxing.recyclerview.draggable.ItemDraggableRange;
+import com.guoxiaoxing.recyclerview.draggable.adapter.DraggableItemAdapter;
+import com.guoxiaoxing.recyclerview.draggable.holder.DraggableItemViewHolder;
+import com.guoxiaoxing.recyclerview.expandable.adapter.BaseExpandableSwipeableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableAdapterHelper;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableDraggableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.holder.ExpandableItemViewHolder;
 import com.guoxiaoxing.recyclerview.swipeable.RecyclerViewSwipeManager;
-import com.guoxiaoxing.recyclerview.swipeable.SwipeableItemAdapter;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultAction;
+import com.guoxiaoxing.recyclerview.swipeable.adapter.SwipeableItemAdapter;
 import com.guoxiaoxing.recyclerview.utils.BaseWrapperAdapter;
 import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
@@ -438,7 +443,7 @@ class ExpandableRecyclerViewWrapperAdapter
             int modDropGroupPosition = dropGroupPosition;
             int modDropChildPosition = dropChildPosition;
 
-            if (draggingFlatPosition < dropFlatPosition)  {
+            if (draggingFlatPosition < dropFlatPosition) {
                 canDrop = true;
                 if (dropIsGroup) {
                     if (isDropGroupExpanded) {
@@ -657,7 +662,7 @@ class ExpandableRecyclerViewWrapperAdapter
         final int groupPosition = ExpandableAdapterHelper.getPackedPositionGroup(expandablePosition);
         final int childPosition = ExpandableAdapterHelper.getPackedPositionChild(expandablePosition);
 
-        return ExpandableSwipeableItemInternalUtils.invokeOnSwipeItem(
+        return ExpandableHelper.invokeOnSwipeItem(
                 adapter, holder, groupPosition, childPosition, result);
     }
 

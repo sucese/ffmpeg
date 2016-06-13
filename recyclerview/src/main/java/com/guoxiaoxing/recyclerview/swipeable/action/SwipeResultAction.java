@@ -18,6 +18,8 @@ package com.guoxiaoxing.recyclerview.swipeable.action;
 
 import android.support.v7.widget.RecyclerView;
 
+import com.guoxiaoxing.recyclerview.swipeable.adapter.SwipeableItemAdapter;
+
 public abstract class SwipeResultAction {
     private final int mResultAction;
 
@@ -39,7 +41,7 @@ public abstract class SwipeResultAction {
     }
 
     /**
-     * This method is called immediately after returning from the {@link com.guoxiaoxing.recyclerview.swipeable.SwipeableItemAdapter#onSwipeItem(RecyclerView.ViewHolder, int, int)} method.
+     * This method is called immediately after returning from the {@link SwipeableItemAdapter#onSwipeItem(RecyclerView.ViewHolder, int, int)} method.
      * You can modify data set and call notifyXXX() methods of adapter in this method.
      */
     protected void onPerformAction() {

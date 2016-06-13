@@ -22,7 +22,12 @@ import android.view.View;
  */
 public class RecyclerViewUtils {
 
-
+    /**
+     * get the screenshot of RecyclerView
+     *
+     * @param recyclerview recyclerview
+     * @return bitmap
+     */
     public static Bitmap getScreenshotFromRecyclerView(RecyclerView recyclerview) {
         RecyclerView.Adapter adapter = recyclerview.getAdapter();
         Bitmap bigBitmap = null;
@@ -64,7 +69,6 @@ public class RecyclerViewUtils {
                 iHeight += bitmap.getHeight();
                 bitmap.recycle();
             }
-
         }
         return bigBitmap;
     }

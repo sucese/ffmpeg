@@ -32,18 +32,18 @@ import com.guoxiaoxing.demo.common.utils.ViewUtils;
 import com.guoxiaoxing.demo.common.widget.ExpandableItemIndicator;
 import com.guoxiaoxing.recyclerview.draggable.DraggableItemConstants;
 import com.guoxiaoxing.recyclerview.draggable.ItemDraggableRange;
-import com.guoxiaoxing.recyclerview.expandable.ExpandableDraggableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableDraggableItemAdapter;
 import com.guoxiaoxing.recyclerview.expandable.ExpandableItemConstants;
-import com.guoxiaoxing.recyclerview.expandable.ExpandableItemViewHolder;
-import com.guoxiaoxing.recyclerview.expandable.ExpandableSwipeableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.holder.ExpandableItemViewHolder;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableSwipeableItemAdapter;
 import com.guoxiaoxing.recyclerview.expandable.RecyclerViewExpandableItemManager;
 import com.guoxiaoxing.recyclerview.swipeable.SwipeableItemConstants;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultAction;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionDefault;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionMoveToSwipedDirection;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionRemoveItem;
-import com.guoxiaoxing.recyclerview.utils.AbstractDraggableSwipeableItemViewHolder;
-import com.guoxiaoxing.recyclerview.utils.AbstractExpandableItemAdapter;
+import com.guoxiaoxing.recyclerview.swipeable.holder.AbstractDraggableSwipeableItemViewHolder;
+import com.guoxiaoxing.recyclerview.expandable.adapter.AbstractExpandableItemAdapter;
 import com.guoxiaoxing.recyclerview.utils.RecyclerViewAdapterUtils;
 
 class ExpandableDraggableSwipeableExampleAdapter

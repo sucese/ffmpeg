@@ -32,7 +32,7 @@ import com.guoxiaoxing.recyclerview.animator.impl.ItemRemoveAnimationManager;
 import com.guoxiaoxing.recyclerview.animator.impl.MoveAnimationInfo;
 import com.guoxiaoxing.recyclerview.animator.impl.RemoveAnimationInfo;
 import com.guoxiaoxing.recyclerview.swipeable.RecyclerViewSwipeManager;
-import com.guoxiaoxing.recyclerview.swipeable.SwipeableItemViewHolder;
+import com.guoxiaoxing.recyclerview.swipeable.holder.SwipeableItemViewHolder;
 
 public class SwipeDismissItemAnimator extends GeneralItemAnimator {
 

@@ -34,6 +34,12 @@ import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 
+import com.guoxiaoxing.recyclerview.draggable.adapter.DraggableItemAdapter;
+import com.guoxiaoxing.recyclerview.draggable.decorator.BaseEdgeEffectDecorator;
+import com.guoxiaoxing.recyclerview.draggable.decorator.DraggingItemDecorator;
+import com.guoxiaoxing.recyclerview.draggable.decorator.LeftRightEdgeEffectDecorator;
+import com.guoxiaoxing.recyclerview.draggable.decorator.TopBottomEdgeEffectDecorator;
+import com.guoxiaoxing.recyclerview.draggable.holder.DraggableItemViewHolder;
 import com.guoxiaoxing.recyclerview.utils.CustomRecyclerViewUtils;
 import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
@@ -1760,12 +1766,12 @@ public class RecyclerViewDragDropManager implements DraggableItemConstants {
         return mItemSettleBackIntoPlaceAnimationInterpolator;
     }
 
-    /*package*/ void onDraggingItemViewRecycled() {
+    public void onDraggingItemViewRecycled() {
         mDraggingItemViewHolder = null;
         mDraggingItemDecorator.invalidateDraggingItem();
     }
 
-    /*package*/ void onNewDraggingItemViewBound(RecyclerView.ViewHolder holder) {
+    public void onNewDraggingItemViewBound(RecyclerView.ViewHolder holder) {
         mDraggingItemViewHolder = holder;
         mDraggingItemDecorator.setDraggingItemViewHolder(holder);
     }

@@ -16,6 +16,8 @@
 
 package com.guoxiaoxing.recyclerview.expandable;
 
+import com.guoxiaoxing.recyclerview.expandable.holder.ExpandableItemViewHolder;
+
 public interface ExpandableItemConstants {
     /**
      * State flag for the {@link ExpandableItemViewHolder#setExpandStateFlags(int)} and {@link ExpandableItemViewHolder#getExpandStateFlags()} methods.

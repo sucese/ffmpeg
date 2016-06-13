@@ -23,6 +23,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.Interpolator;
 
+import com.guoxiaoxing.recyclerview.draggable.decorator.BaseDraggableItemDecorator;
 import com.guoxiaoxing.recyclerview.utils.CustomRecyclerViewUtils;
 
 class SwapTargetItemOperator extends BaseDraggableItemDecorator {

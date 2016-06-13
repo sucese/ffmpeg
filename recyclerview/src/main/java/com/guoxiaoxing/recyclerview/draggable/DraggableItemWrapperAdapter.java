@@ -20,10 +20,12 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.ViewGroup;
 
-import com.guoxiaoxing.recyclerview.swipeable.BaseSwipeableItemAdapter;
+import com.guoxiaoxing.recyclerview.draggable.adapter.DraggableItemAdapter;
+import com.guoxiaoxing.recyclerview.draggable.holder.DraggableItemViewHolder;
+import com.guoxiaoxing.recyclerview.swipeable.SwipeableHelper;
+import com.guoxiaoxing.recyclerview.swipeable.adapter.BaseSwipeableItemAdapter;
 import com.guoxiaoxing.recyclerview.swipeable.RecyclerViewSwipeManager;
-import com.guoxiaoxing.recyclerview.swipeable.SwipeableItemAdapter;
-import com.guoxiaoxing.recyclerview.swipeable.SwipeableItemInternalUtils;
+import com.guoxiaoxing.recyclerview.swipeable.adapter.SwipeableItemAdapter;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultAction;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionDefault;
 import com.guoxiaoxing.recyclerview.utils.BaseWrapperAdapter;
@@ -31,7 +33,8 @@ import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
 import java.util.List;
 
-class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends BaseWrapperAdapter<VH> implements SwipeableItemAdapter<VH> {
+public class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends
+        BaseWrapperAdapter<VH> implements SwipeableItemAdapter<VH> {
     private static final String TAG = "ARVDraggableWrapper";
 
     private static final int STATE_FLAG_INITIAL_VALUE = -1;
@@ -44,7 +47,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
     private static final boolean LOCAL_LOGI = true;
     private static final boolean DEBUG_BYPASS_MOVE_OPERATION_MODE = false;
 
-    private RecyclerViewDragDropManager mDragDropManager;
+    private RecyclerViewDragDropManager mRecyclerViewDragDropManager;
     private DraggableItemAdapter mDraggableItemAdapter;
     private RecyclerView.ViewHolder mDraggingItemViewHolder;
     private DraggingItemInfo mDraggingItemInfo;
@@ -64,7 +67,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
             throw new IllegalArgumentException("manager cannot be null");
         }
 
-        mDragDropManager = manager;
+        mRecyclerViewDragDropManager = manager;
     }
 
     @Override
@@ -72,7 +75,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
         super.onRelease();
         mDraggingItemViewHolder = null;
         mDraggableItemAdapter = null;
-        mDragDropManager = null;
+        mRecyclerViewDragDropManager = null;
     }
 
     @Override
@@ -105,7 +108,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
                 }
 
                 mDraggingItemViewHolder = holder;
-                mDragDropManager.onNewDraggingItemViewBound(holder);
+                mRecyclerViewDragDropManager.onNewDraggingItemViewBound(holder);
             }
 
             int flags = Constants.STATE_FLAG_DRAGGING;
@@ -226,8 +229,8 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
     }
 
     private void cancelDrag() {
-        if (mDragDropManager != null) {
-            mDragDropManager.cancelDrag();
+        if (mRecyclerViewDragDropManager != null) {
+            mRecyclerViewDragDropManager.cancelDrag();
         }
     }
 
@@ -295,7 +298,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
             Log.i(TAG, "a view holder object which is bound to currently dragging item is recycled");
         }
         mDraggingItemViewHolder = null;
-        mDragDropManager.onDraggingItemViewRecycled();
+        mRecyclerViewDragDropManager.onDraggingItemViewRecycled();
     }
 
     // NOTE: This method is called from RecyclerViewDragDropManager
@@ -448,7 +451,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
 
         int correctedPosition = getOriginalPosition(position);
 
-        return SwipeableItemInternalUtils.invokeOnSwipeItem(
+        return SwipeableHelper.invokeOnSwipeItem(
                 (BaseSwipeableItemAdapter) adapter, holder, correctedPosition, result);
     }
 }

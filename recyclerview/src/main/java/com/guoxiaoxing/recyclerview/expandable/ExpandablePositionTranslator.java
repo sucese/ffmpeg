@@ -18,6 +18,9 @@ package com.guoxiaoxing.recyclerview.expandable;
 
 import android.support.v7.widget.RecyclerView;
 
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableAdapterHelper;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableItemAdapter;
+
 import java.util.Arrays;
 
 class ExpandablePositionTranslator {

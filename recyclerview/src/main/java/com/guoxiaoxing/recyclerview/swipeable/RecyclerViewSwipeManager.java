@@ -34,6 +34,9 @@ import android.view.ViewConfiguration;
 import com.guoxiaoxing.recyclerview.animator.SwipeDismissItemAnimator;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultAction;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionDefault;
+import com.guoxiaoxing.recyclerview.swipeable.animator.ItemSlidingAnimator;
+import com.guoxiaoxing.recyclerview.swipeable.decorator.RemovingItemDecorator;
+import com.guoxiaoxing.recyclerview.swipeable.holder.SwipeableItemViewHolder;
 import com.guoxiaoxing.recyclerview.utils.CustomRecyclerViewUtils;
 import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
@@ -415,13 +418,13 @@ public class RecyclerViewSwipeManager implements SwipeableItemConstants {
                     (absVelocity <= mMaxFlingVelocity) &&
                     ((absDistance > (viewSize / 2)) || (absVelocity >= mMinFlingVelocity))) {
 
-                if (horizontal && (distance < 0) && SwipeReactionUtils.canSwipeLeft(mSwipingItemReactionType)) {
+                if (horizontal && (distance < 0) && SwipeableHelper.canSwipeLeft(mSwipingItemReactionType)) {
                     result = RESULT_SWIPED_LEFT;
-                } else if ((!horizontal) && (distance < 0) && SwipeReactionUtils.canSwipeUp(mSwipingItemReactionType)) {
+                } else if ((!horizontal) && (distance < 0) && SwipeableHelper.canSwipeUp(mSwipingItemReactionType)) {
                     result = RESULT_SWIPED_UP;
-                } else if (horizontal && (distance > 0) && SwipeReactionUtils.canSwipeRight(mSwipingItemReactionType)) {
+                } else if (horizontal && (distance > 0) && SwipeableHelper.canSwipeRight(mSwipingItemReactionType)) {
                     result = RESULT_SWIPED_RIGHT;
-                } else if ((!horizontal) && (distance > 0) && SwipeReactionUtils.canSwipeDown(mSwipingItemReactionType)) {
+                } else if ((!horizontal) && (distance > 0) && SwipeableHelper.canSwipeDown(mSwipingItemReactionType)) {
                     result = RESULT_SWIPED_DOWN;
                 }
             }

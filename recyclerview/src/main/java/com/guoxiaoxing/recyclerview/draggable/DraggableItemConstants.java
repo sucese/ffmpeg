@@ -16,6 +16,8 @@
 
 package com.guoxiaoxing.recyclerview.draggable;
 
+import com.guoxiaoxing.recyclerview.draggable.holder.DraggableItemViewHolder;
+
 @SuppressWarnings("PointlessBitwiseExpression")
 public interface DraggableItemConstants {
     /**

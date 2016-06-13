@@ -23,12 +23,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultAction;
+import com.guoxiaoxing.recyclerview.swipeable.adapter.BaseSwipeableItemAdapter;
+import com.guoxiaoxing.recyclerview.swipeable.holder.SwipeableItemViewHolder;
 import com.guoxiaoxing.recyclerview.utils.BaseWrapperAdapter;
 import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
 import java.util.List;
 
-class SwipeableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends BaseWrapperAdapter<VH> {
+public class SwipeableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends BaseWrapperAdapter<VH> {
     private static final String TAG = "ARVSwipeableWrapper";
 
     private interface Constants extends SwipeableItemConstants {
@@ -226,7 +228,7 @@ class SwipeableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
     // NOTE: This method is called from ItemSlidingAnimator
     /*package*/
     @SuppressWarnings("unchecked")
-    void onUpdateSlideAmount(RecyclerView.ViewHolder holder, int position, boolean horizontal, float amount, boolean isSwiping) {
+    public void onUpdateSlideAmount(RecyclerView.ViewHolder holder, int position, boolean horizontal, float amount, boolean isSwiping) {
         if (LOCAL_LOGV) {
             Log.v(TAG, "onUpdateSlideAmount(holder = " + holder +
                     ", position = " + position +
@@ -260,7 +262,7 @@ class SwipeableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
 
         mSwipingItemId = RecyclerView.NO_ID;
 
-        return SwipeableItemInternalUtils.invokeOnSwipeItem(mSwipeableItemAdapter, holder, position, result);
+        return SwipeableHelper.invokeOnSwipeItem(mSwipeableItemAdapter, holder, position, result);
     }
 
     /*package*/

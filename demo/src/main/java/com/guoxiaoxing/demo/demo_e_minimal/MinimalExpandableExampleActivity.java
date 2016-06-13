@@ -26,12 +26,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.guoxiaoxing.demo.R;
-import com.guoxiaoxing.recyclerview.draggable.DraggableItemAdapter;
-import com.guoxiaoxing.recyclerview.draggable.ItemDraggableRange;
 import com.guoxiaoxing.recyclerview.expandable.RecyclerViewExpandableItemManager;
-import com.guoxiaoxing.recyclerview.utils.AbstractDraggableItemViewHolder;
-import com.guoxiaoxing.recyclerview.utils.AbstractExpandableItemAdapter;
-import com.guoxiaoxing.recyclerview.utils.AbstractExpandableItemViewHolder;
+import com.guoxiaoxing.recyclerview.expandable.adapter.AbstractExpandableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.holder.AbstractExpandableItemViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

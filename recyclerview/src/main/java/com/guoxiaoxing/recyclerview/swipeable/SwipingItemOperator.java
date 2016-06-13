@@ -20,13 +20,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.Interpolator;
 
+import com.guoxiaoxing.recyclerview.swipeable.holder.SwipeableItemViewHolder;
+import com.guoxiaoxing.recyclerview.swipeable.animator.RubberBandInterpolator;
+
 class SwipingItemOperator {
     @SuppressWarnings("unused")
     private static final String TAG = "SwipingItemOperator";
 
-    private static final int REACTION_CAN_NOT_SWIPE = InternalConstants.REACTION_CAN_NOT_SWIPE;
-    private static final int REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT = InternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT;
-    private static final int REACTION_CAN_SWIPE = InternalConstants.REACTION_CAN_SWIPE;
+    private static final int REACTION_CAN_NOT_SWIPE = SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE;
+    private static final int REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT = SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT;
+    private static final int REACTION_CAN_SWIPE = SwipeableInternalConstants.REACTION_CAN_SWIPE;
 
     private static final float RUBBER_BAND_LIMIT = 0.15f;
     private static final int MIN_GRABBING_AREA_SIZE = 48;
@@ -57,10 +60,10 @@ class SwipingItemOperator {
 
         mSwipeManager = manager;
         mSwipingItem = swipingItem;
-        mLeftSwipeReactionType = SwipeReactionUtils.extractLeftReaction(swipeReactionType);
-        mUpSwipeReactionType = SwipeReactionUtils.extractUpReaction(swipeReactionType);
-        mRightSwipeReactionType = SwipeReactionUtils.extractRightReaction(swipeReactionType);
-        mDownSwipeReactionType = SwipeReactionUtils.extractDownReaction(swipeReactionType);
+        mLeftSwipeReactionType = SwipeableHelper.extractLeftReaction(swipeReactionType);
+        mUpSwipeReactionType = SwipeableHelper.extractUpReaction(swipeReactionType);
+        mRightSwipeReactionType = SwipeableHelper.extractRightReaction(swipeReactionType);
+        mDownSwipeReactionType = SwipeableHelper.extractDownReaction(swipeReactionType);
         mSwipeHorizontal = swipeHorizontal;
 
         mSwipingItemContainerView = ((SwipeableItemViewHolder) swipingItem).getSwipeableContainerView();

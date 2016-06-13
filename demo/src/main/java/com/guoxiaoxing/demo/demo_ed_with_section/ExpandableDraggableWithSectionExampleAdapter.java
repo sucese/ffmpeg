@@ -30,13 +30,13 @@ import com.guoxiaoxing.demo.common.utils.ViewUtils;
 import com.guoxiaoxing.demo.common.widget.ExpandableItemIndicator;
 import com.guoxiaoxing.recyclerview.draggable.DraggableItemConstants;
 import com.guoxiaoxing.recyclerview.draggable.ItemDraggableRange;
-import com.guoxiaoxing.recyclerview.expandable.ExpandableDraggableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.adapter.ExpandableDraggableItemAdapter;
 import com.guoxiaoxing.recyclerview.expandable.ExpandableItemConstants;
-import com.guoxiaoxing.recyclerview.expandable.ExpandableItemViewHolder;
+import com.guoxiaoxing.recyclerview.expandable.holder.ExpandableItemViewHolder;
 import com.guoxiaoxing.recyclerview.expandable.GroupPositionItemDraggableRange;
 import com.guoxiaoxing.recyclerview.expandable.RecyclerViewExpandableItemManager;
-import com.guoxiaoxing.recyclerview.utils.AbstractDraggableItemViewHolder;
-import com.guoxiaoxing.recyclerview.utils.AbstractExpandableItemAdapter;
+import com.guoxiaoxing.recyclerview.draggable.holder.AbstractDraggableItemViewHolder;
+import com.guoxiaoxing.recyclerview.expandable.adapter.AbstractExpandableItemAdapter;
 
 class ExpandableDraggableWithSectionExampleAdapter
         extends AbstractExpandableItemAdapter<ExpandableDraggableWithSectionExampleAdapter.MyGroupViewHolder, ExpandableDraggableWithSectionExampleAdapter.MyChildViewHolder>

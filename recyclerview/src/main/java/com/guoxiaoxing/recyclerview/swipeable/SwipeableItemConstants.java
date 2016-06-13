@@ -18,6 +18,9 @@ package com.guoxiaoxing.recyclerview.swipeable;
 
 import android.support.v7.widget.RecyclerView;
 
+import com.guoxiaoxing.recyclerview.swipeable.adapter.SwipeableItemAdapter;
+import com.guoxiaoxing.recyclerview.swipeable.holder.SwipeableItemViewHolder;
+
 public interface SwipeableItemConstants {
     /**
      * State flag for the {@link SwipeableItemViewHolder#setSwipeStateFlags(int)} and {@link SwipeableItemViewHolder#getSwipeStateFlags()} methods.
@@ -93,119 +96,119 @@ public interface SwipeableItemConstants {
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe left" (completely no reactions)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_LEFT = (InternalConstants.REACTION_CAN_NOT_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_LEFT);
+    int REACTION_CAN_NOT_SWIPE_LEFT = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_LEFT);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe left"  (not swipeable, but rubber-band effect applied)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_LEFT_WITH_RUBBER_BAND_EFFECT = (InternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << InternalConstants.BIT_SHIFT_AMOUNT_LEFT);
+    int REACTION_CAN_NOT_SWIPE_LEFT_WITH_RUBBER_BAND_EFFECT = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_LEFT);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can swipe left"</p>
      */
-    int REACTION_CAN_SWIPE_LEFT = (InternalConstants.REACTION_CAN_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_LEFT);
+    int REACTION_CAN_SWIPE_LEFT = (SwipeableInternalConstants.REACTION_CAN_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_LEFT);
 
     /**
      * <p>Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>If this flag is specified, swipe operation will not start even if user swipe an item to the LEFT direction.</p>
      */
-    int REACTION_MASK_START_SWIPE_LEFT = (InternalConstants.REACTION_MASK_START_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_LEFT);
+    int REACTION_MASK_START_SWIPE_LEFT = (SwipeableInternalConstants.REACTION_MASK_START_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_LEFT);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe up" (completely no reactions)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_UP = (InternalConstants.REACTION_CAN_NOT_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_UP);
+    int REACTION_CAN_NOT_SWIPE_UP = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_UP);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe up"  (not swipeable, but rubber-band effect applied)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_UP_WITH_RUBBER_BAND_EFFECT = (InternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << InternalConstants.BIT_SHIFT_AMOUNT_UP);
+    int REACTION_CAN_NOT_SWIPE_UP_WITH_RUBBER_BAND_EFFECT = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_UP);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can swipe up"</p>
      */
-    int REACTION_CAN_SWIPE_UP = (InternalConstants.REACTION_CAN_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_UP);
+    int REACTION_CAN_SWIPE_UP = (SwipeableInternalConstants.REACTION_CAN_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_UP);
 
     /**
      * <p>Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>If this flag is specified, swipe operation will not start even if user swipe an item to the UP direction.</p>
      */
-    int REACTION_MASK_START_SWIPE_UP = (InternalConstants.REACTION_MASK_START_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_UP);
+    int REACTION_MASK_START_SWIPE_UP = (SwipeableInternalConstants.REACTION_MASK_START_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_UP);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe right" (completely no reactions)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_RIGHT = (InternalConstants.REACTION_CAN_NOT_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
+    int REACTION_CAN_NOT_SWIPE_RIGHT = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe right"  (not swipeable, but rubber-band effect applied)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_RIGHT_WITH_RUBBER_BAND_EFFECT = (InternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << InternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
+    int REACTION_CAN_NOT_SWIPE_RIGHT_WITH_RUBBER_BAND_EFFECT = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can swipe right"</p>
      */
-    int REACTION_CAN_SWIPE_RIGHT = (InternalConstants.REACTION_CAN_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
+    int REACTION_CAN_SWIPE_RIGHT = (SwipeableInternalConstants.REACTION_CAN_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
 
     /**
      * <p>Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>If this flag is specified, swipe operation will not start even if user swipe an item to the RIGHT direction.</p>
      */
-    int REACTION_MASK_START_SWIPE_RIGHT = (InternalConstants.REACTION_MASK_START_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
+    int REACTION_MASK_START_SWIPE_RIGHT = (SwipeableInternalConstants.REACTION_MASK_START_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_RIGHT);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe down" (completely no reactions)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_DOWN = (InternalConstants.REACTION_CAN_NOT_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_DOWN);
+    int REACTION_CAN_NOT_SWIPE_DOWN = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_DOWN);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can not swipe down"  (not swipeable, but rubber-band effect applied)</p>
      */
-    int REACTION_CAN_NOT_SWIPE_DOWN_WITH_RUBBER_BAND_EFFECT = (InternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << InternalConstants.BIT_SHIFT_AMOUNT_DOWN);
+    int REACTION_CAN_NOT_SWIPE_DOWN_WITH_RUBBER_BAND_EFFECT = (SwipeableInternalConstants.REACTION_CAN_NOT_SWIPE_WITH_RUBBER_BAND_EFFECT << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_DOWN);
 
     /**
      * <p>Reaction type to swipe operation. Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>Indicates "can swipe down"</p>
      */
-    int REACTION_CAN_SWIPE_DOWN = (InternalConstants.REACTION_CAN_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_DOWN);
+    int REACTION_CAN_SWIPE_DOWN = (SwipeableInternalConstants.REACTION_CAN_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_DOWN);
 
     /**
      * <p>Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>If this flag is specified, swipe operation will not start even if user swipe an item to the left direction.</p>
      */
-    int REACTION_MASK_START_SWIPE_DOWN = (InternalConstants.REACTION_MASK_START_SWIPE << InternalConstants.BIT_SHIFT_AMOUNT_DOWN);
+    int REACTION_MASK_START_SWIPE_DOWN = (SwipeableInternalConstants.REACTION_MASK_START_SWIPE << SwipeableInternalConstants.BIT_SHIFT_AMOUNT_DOWN);
 
     /**
      * <p>Used for the return value of the
      * {@link SwipeableItemAdapter#onGetSwipeReactionType(RecyclerView.ViewHolder, int, int, int)} method.</p>
      * <p>If this flag is specified, swiping starts on long press.</p>
      */
-    int REACTION_START_SWIPE_ON_LONG_PRESS = InternalConstants.REACTION_START_SWIPE_ON_LONG_PRESS;
+    int REACTION_START_SWIPE_ON_LONG_PRESS = SwipeableInternalConstants.REACTION_START_SWIPE_ON_LONG_PRESS;
 
     // ---
 

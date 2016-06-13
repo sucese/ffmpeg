@@ -26,8 +26,8 @@ import com.guoxiaoxing.demo.R;
 import com.guoxiaoxing.demo.common.data.AbstractExpandableDataProvider;
 import com.guoxiaoxing.demo.common.widget.ExpandableItemIndicator;
 import com.guoxiaoxing.recyclerview.expandable.ExpandableItemConstants;
-import com.guoxiaoxing.recyclerview.utils.AbstractExpandableItemAdapter;
-import com.guoxiaoxing.recyclerview.utils.AbstractExpandableItemViewHolder;
+import com.guoxiaoxing.recyclerview.expandable.adapter.AbstractExpandableItemAdapter;
+import com.guoxiaoxing.recyclerview.expandable.holder.AbstractExpandableItemViewHolder;
 
 class ExpandableExampleAdapter
         extends AbstractExpandableItemAdapter<ExpandableExampleAdapter.MyGroupViewHolder, ExpandableExampleAdapter.MyChildViewHolder> {

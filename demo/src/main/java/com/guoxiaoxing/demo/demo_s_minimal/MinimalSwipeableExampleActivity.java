@@ -28,14 +28,14 @@ import android.widget.TextView;
 
 import com.guoxiaoxing.demo.R;
 import com.guoxiaoxing.recyclerview.swipeable.RecyclerViewSwipeManager;
-import com.guoxiaoxing.recyclerview.swipeable.SwipeableItemAdapter;
+import com.guoxiaoxing.recyclerview.swipeable.adapter.SwipeableItemAdapter;
 import com.guoxiaoxing.recyclerview.swipeable.SwipeableItemConstants;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultAction;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionDefault;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionRemoveItem;
 import com.guoxiaoxing.recyclerview.swipeable.annotation.SwipeableItemDrawableTypes;
 import com.guoxiaoxing.recyclerview.swipeable.annotation.SwipeableItemResults;
-import com.guoxiaoxing.recyclerview.utils.AbstractSwipeableItemViewHolder;
+import com.guoxiaoxing.recyclerview.swipeable.holder.AbstractSwipeableItemViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
