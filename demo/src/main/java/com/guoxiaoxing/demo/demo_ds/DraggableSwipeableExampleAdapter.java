@@ -39,7 +39,6 @@ import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionDefault;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionMoveToSwipedDirection;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionRemoveItem;
 import com.guoxiaoxing.recyclerview.swipeable.holder.AbstractDraggableSwipeableItemViewHolder;
-import com.guoxiaoxing.recyclerview.utils.RecyclerViewAdapterUtils;
 
 class DraggableSwipeableExampleAdapter
         extends RecyclerView.Adapter<DraggableSwipeableExampleAdapter.MyViewHolder>

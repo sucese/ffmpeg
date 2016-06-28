@@ -36,7 +36,6 @@ import com.guoxiaoxing.recyclerview.decoration.ItemShadowDecorator;
 import com.guoxiaoxing.recyclerview.decoration.SimpleListDividerDecorator;
 import com.guoxiaoxing.recyclerview.swipeable.RecyclerViewSwipeManager;
 import com.guoxiaoxing.recyclerview.touchguard.RecyclerViewTouchActionGuardManager;
-import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
 public class SwipeOnLongPressExampleFragment extends Fragment {
     private RecyclerView mRecyclerView;

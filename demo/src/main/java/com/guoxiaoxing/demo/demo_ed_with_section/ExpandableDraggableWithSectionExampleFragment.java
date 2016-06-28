@@ -39,7 +39,6 @@ import com.guoxiaoxing.recyclerview.draggable.RecyclerViewDragDropManager;
 import com.guoxiaoxing.recyclerview.expandable.RecyclerViewExpandableItemManager;
 import com.guoxiaoxing.recyclerview.swipeable.RecyclerViewSwipeManager;
 import com.guoxiaoxing.recyclerview.touchguard.RecyclerViewTouchActionGuardManager;
-import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
 public class ExpandableDraggableWithSectionExampleFragment extends Fragment
         implements RecyclerViewExpandableItemManager.OnGroupCollapseListener,

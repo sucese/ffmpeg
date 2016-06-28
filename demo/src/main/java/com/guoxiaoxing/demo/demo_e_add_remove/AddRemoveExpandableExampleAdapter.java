@@ -30,7 +30,6 @@ import com.guoxiaoxing.recyclerview.expandable.ExpandableItemConstants;
 import com.guoxiaoxing.recyclerview.expandable.RecyclerViewExpandableItemManager;
 import com.guoxiaoxing.recyclerview.expandable.adapter.AbstractExpandableItemAdapter;
 import com.guoxiaoxing.recyclerview.expandable.holder.AbstractExpandableItemViewHolder;
-import com.guoxiaoxing.recyclerview.utils.RecyclerViewAdapterUtils;
 
 class AddRemoveExpandableExampleAdapter
         extends AbstractExpandableItemAdapter<AddRemoveExpandableExampleAdapter.MyGroupViewHolder, AddRemoveExpandableExampleAdapter.MyChildViewHolder> {

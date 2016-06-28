@@ -34,7 +34,6 @@ import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultAction;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionDefault;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionMoveToSwipedDirection;
 import com.guoxiaoxing.recyclerview.swipeable.holder.AbstractSwipeableItemViewHolder;
-import com.guoxiaoxing.recyclerview.utils.RecyclerViewAdapterUtils;
 
 class SwipeableWIthButtonExampleAdapter
         extends RecyclerView.Adapter<SwipeableWIthButtonExampleAdapter.MyViewHolder>

@@ -37,7 +37,6 @@ import com.guoxiaoxing.recyclerview.decoration.SimpleListDividerDecorator;
 import com.guoxiaoxing.recyclerview.draggable.RecyclerViewDragDropManager;
 import com.guoxiaoxing.recyclerview.swipeable.RecyclerViewSwipeManager;
 import com.guoxiaoxing.recyclerview.touchguard.RecyclerViewTouchActionGuardManager;
-import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
 public class DraggableSwipeableExampleFragment extends Fragment {
     private RecyclerView mRecyclerView;

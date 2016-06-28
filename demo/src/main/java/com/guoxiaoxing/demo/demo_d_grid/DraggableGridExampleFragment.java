@@ -34,7 +34,6 @@ import com.guoxiaoxing.recyclerview.animator.GeneralItemAnimator;
 import com.guoxiaoxing.recyclerview.animator.RefactoredDefaultItemAnimator;
 import com.guoxiaoxing.recyclerview.decoration.ItemShadowDecorator;
 import com.guoxiaoxing.recyclerview.draggable.RecyclerViewDragDropManager;
-import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
 public class DraggableGridExampleFragment extends Fragment {
     private RecyclerView mRecyclerView;

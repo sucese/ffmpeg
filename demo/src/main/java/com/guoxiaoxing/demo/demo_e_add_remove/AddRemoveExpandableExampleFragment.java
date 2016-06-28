@@ -39,7 +39,6 @@ import com.guoxiaoxing.recyclerview.animator.RefactoredDefaultItemAnimator;
 import com.guoxiaoxing.recyclerview.decoration.ItemShadowDecorator;
 import com.guoxiaoxing.recyclerview.decoration.SimpleListDividerDecorator;
 import com.guoxiaoxing.recyclerview.expandable.RecyclerViewExpandableItemManager;
-import com.guoxiaoxing.recyclerview.utils.WrapperAdapterUtils;
 
 public class AddRemoveExpandableExampleFragment
         extends Fragment

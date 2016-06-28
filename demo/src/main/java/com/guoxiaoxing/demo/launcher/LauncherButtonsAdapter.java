@@ -27,7 +27,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.guoxiaoxing.demo.R;
-import com.guoxiaoxing.recyclerview.utils.RecyclerViewAdapterUtils;
 
 import java.util.ArrayList;
 import java.util.List;

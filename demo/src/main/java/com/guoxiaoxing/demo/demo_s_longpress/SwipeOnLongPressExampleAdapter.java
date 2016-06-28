@@ -33,7 +33,6 @@ import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionDefault;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionMoveToSwipedDirection;
 import com.guoxiaoxing.recyclerview.swipeable.action.SwipeResultActionRemoveItem;
 import com.guoxiaoxing.recyclerview.swipeable.holder.AbstractSwipeableItemViewHolder;
-import com.guoxiaoxing.recyclerview.utils.RecyclerViewAdapterUtils;
 
 class SwipeOnLongPressExampleAdapter
         extends RecyclerView.Adapter<SwipeOnLongPressExampleAdapter.MyViewHolder>
