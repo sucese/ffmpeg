@@ -8,8 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/codec" />
             <option value="$PROJECT_DIR$/live-player" />
+            <option value="$PROJECT_DIR$/media-codec" />
             <option value="$PROJECT_DIR$/video-player" />
           </set>
         </option>
