@@ -1,4 +1,4 @@
-# A discuss about the theory and practice of video codec
+# FFmpeg编解码框架篇：FFmpeg框架概览
 
 **关于作者**
 
@@ -12,15 +12,3 @@
 >
 >文章首发于[Github](https://github.com/guoxiaoxing)，后续也会同步在[简书](http://www.jianshu.com/users/66a47e04215b/latest_articles)与
 [CSDN](http://blog.csdn.net/allenwells)等博客平台上。文章中如果有什么问题，欢迎发邮件与我交流，邮件可发至guoxiaoxingse@163.com。
-
-本系列文章主要讨论Android平台视频编解码相关理论与实践，主要包含以下方面的内容。
-
-编解码
-
-- [MediaCodec](https://github.com/guoxiaoxing/awesome-android-video/blob/master/doc/MediaCodec/01Androiid原生编解码框架篇：编解码框架概览.md)
-- [FFmpeg](https://github.com/guoxiaoxing/awesome-android-video/blob/master/doc/MediaCodec/01FFmpeg编解码框架篇：FFmpeg框架概览.md)
-
-播放器
-
-- 视频播放器
-- 直播播放器

@@ -31,3 +31,4 @@
 2. 循环直至完成，如果输入缓冲区就绪，读取一个输入缓冲区就绪，读取一个输入块，并复制到输入缓冲区；如果输入缓冲区就绪，则复制输出缓冲区的数据。
 3. 释放MediaCodec对象。
 
+<img src="https://github.com/guoxiaoxing/awesome-android-video/raw/master/art/MediaCodec/02/media_codec_process_flow.png"/>

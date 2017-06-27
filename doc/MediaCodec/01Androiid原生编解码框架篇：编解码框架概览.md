@@ -27,6 +27,8 @@ MediaCodec等一系列的类主要用来编解码音视频，整个家族成员�
 - Surface
 - AudioTrack
 
+<img src="https://github.com/guoxiaoxing/awesome-android-video/raw/master/art/MediaCodec/01/media_codec.png"/>
+
 
 # 附录
 
