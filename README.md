@@ -18,8 +18,8 @@
 
 编解码
 
-- ffmpeg
-- codec
+- FFmpeg
+- MediaCodec
 
 播放器
 
