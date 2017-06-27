@@ -31,4 +31,88 @@
 2. 循环直至完成，如果输入缓冲区就绪，读取一个输入缓冲区就绪，读取一个输入块，并复制到输入缓冲区；如果输入缓冲区就绪，则复制输出缓冲区的数据。
 3. 释放MediaCodec对象。
 
+每个编码器都有3种状态：Stopped、Executing与Released。Stopped分为3个子状态：Configuared、Uninitalalized与Error，Executing状态又分
+为3个子状态：Flushed、Running与End of Stream。3个状态的关系如下：
+
 <img src="https://github.com/guoxiaoxing/awesome-android-video/raw/master/art/MediaCodec/02/media_codec_process_flow.png"/>
+
+### 1 初始化
+
+### 2 处理数据
+
+异步模式
+
+```java
+MediaCodec codec = MediaCodec.createByCodecName(name);
+ MediaFormat mOutputFormat; // member variable
+ codec.setCallback(new MediaCodec.Callback() {
+   @Override
+   void onInputBufferAvailable(MediaCodec mc, int inputBufferId) {
+     ByteBuffer inputBuffer = codec.getInputBuffer(inputBufferId);
+     // fill inputBuffer with valid data
+     …
+     codec.queueInputBuffer(inputBufferId, …);
+   }
+
+   @Override
+   void onOutputBufferAvailable(MediaCodec mc, int outputBufferId, …) {
+     ByteBuffer outputBuffer = codec.getOutputBuffer(outputBufferId);
+     MediaFormat bufferFormat = codec.getOutputFormat(outputBufferId); // option A
+     // bufferFormat is equivalent to mOutputFormat
+     // outputBuffer is ready to be processed or rendered.
+     …
+     codec.releaseOutputBuffer(outputBufferId, …);
+   }
+
+   @Override
+   void onOutputFormatChanged(MediaCodec mc, MediaFormat format) {
+     // Subsequent data will conform to new format.
+     // Can ignore if using getOutputFormat(outputBufferId)
+     mOutputFormat = format; // option B
+   }
+
+   @Override
+   void onError(…) {
+     …
+   }
+ });
+ codec.configure(format, …);
+ mOutputFormat = codec.getOutputFormat(); // option B
+ codec.start();
+ // wait for processing to complete
+ codec.stop();
+ codec.release();
+```
+同步模式
+
+```java
+ MediaCodec codec = MediaCodec.createByCodecName(name);
+ codec.configure(format, …);
+ MediaFormat outputFormat = codec.getOutputFormat(); // option B
+ codec.start();
+ for (;;) {
+   int inputBufferId = codec.dequeueInputBuffer(timeoutUs);
+   if (inputBufferId >= 0) {
+     ByteBuffer inputBuffer = codec.getInputBuffer(…);
+     // fill inputBuffer with valid data
+     …
+     codec.queueInputBuffer(inputBufferId, …);
+   }
+   int outputBufferId = codec.dequeueOutputBuffer(…);
+   if (outputBufferId >= 0) {
+     ByteBuffer outputBuffer = codec.getOutputBuffer(outputBufferId);
+     MediaFormat bufferFormat = codec.getOutputFormat(outputBufferId); // option A
+     // bufferFormat is identical to outputFormat
+     // outputBuffer is ready to be processed or rendered.
+     …
+     codec.releaseOutputBuffer(outputBufferId, …);
+   } else if (outputBufferId == MediaCodec.INFO_OUTPUT_FORMAT_CHANGED) {
+     // Subsequent data will conform to new format.
+     // Can ignore if using getOutputFormat(outputBufferId)
+     outputFormat = codec.getOutputFormat(); // option B
+   }
+ }
+ codec.stop();
+ codec.release();
+
+```
