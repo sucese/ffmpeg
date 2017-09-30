@@ -1,1 +1,1 @@
-include ':live-player', ':video-player', ':media-codec'
+include ':codec-demo', ':ffmpeg-demo'

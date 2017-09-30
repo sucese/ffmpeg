@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/live-player/app.iml" filepath="$PROJECT_DIR$/live-player/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/awesome-android-video.iml" filepath="$PROJECT_DIR$/awesome-android-video.iml" />
-      <module fileurl="file://$PROJECT_DIR$/live-player/live-player.iml" filepath="$PROJECT_DIR$/live-player/live-player.iml" />
       <module fileurl="file://$PROJECT_DIR$/media-codec/codec.iml" filepath="$PROJECT_DIR$/media-codec/codec.iml" />
-      <module fileurl="file://$PROJECT_DIR$/video-player/video-player.iml" filepath="$PROJECT_DIR$/video-player/video-player.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codec-demo/codec.iml" filepath="$PROJECT_DIR$/codec-demo/codec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ffmpeg.iml" filepath="$PROJECT_DIR$/ffmpeg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ffmpeg-demo/ffmpeg-demo.iml" filepath="$PROJECT_DIR$/ffmpeg-demo/ffmpeg-demo.iml" />
     </modules>
   </component>
 </project>
