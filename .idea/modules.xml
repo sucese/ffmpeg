@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/live-player/app.iml" filepath="$PROJECT_DIR$/live-player/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/media-codec/codec.iml" filepath="$PROJECT_DIR$/media-codec/codec.iml" />
       <module fileurl="file://$PROJECT_DIR$/codec-demo/codec.iml" filepath="$PROJECT_DIR$/codec-demo/codec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codec-demo/codec-demo.iml" filepath="$PROJECT_DIR$/codec-demo/codec-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ffmpeg.iml" filepath="$PROJECT_DIR$/ffmpeg.iml" />
       <module fileurl="file://$PROJECT_DIR$/ffmpeg-demo/ffmpeg-demo.iml" filepath="$PROJECT_DIR$/ffmpeg-demo/ffmpeg-demo.iml" />
     </modules>
